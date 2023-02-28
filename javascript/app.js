@@ -51,6 +51,10 @@ function initTyping() {
 
       setInterval(() => {
          characters.forEach(span => span.classList.add("opacity-middle"));
+         timeTag.classList.add("underline");
+         mistakeTag.classList.add("underline");
+         wpmTag.classList.add("underline");
+         cpmTag.classList.add("underline");
       }, 60000);
 
       let wpm = Math.round((((charIndex - mistakes) / 5) / (maxTime - timeLeft)) * 60);

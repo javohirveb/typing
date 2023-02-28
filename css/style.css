@@ -58,6 +58,9 @@ body {
 .opacity-middle {
    opacity: 0.5;
 }
+.underline {
+   text-decoration: underline;
+}
 
 .typing-text p span.correct {
    color: green;
@@ -144,4 +147,39 @@ body {
 
 .result-details li span {
    margin-left: 10px;
+}
+
+@media only screen and (max-width: 756px) {
+
+   .wrapper {
+      height: 100vh;
+   }
+
+   .content-box .content {
+      flex-direction: column;
+      gap: 20px;
+   }
+
+   .content-box .typing-text {
+      max-height: 104px;
+      overflow-y: auto;
+   }
+
+   .content .result-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+   }
+
+   .typing-text p {
+      font-size: 16px;
+   }
+
+   .result-details li {
+      font-size: 14px;
+   }
+
+   .result-details li:nth-last-of-type(2) {
+      border: none;
+   }
 }
